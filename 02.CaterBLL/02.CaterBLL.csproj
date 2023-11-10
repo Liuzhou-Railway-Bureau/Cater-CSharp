@@ -50,6 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderInfoBll.cs" />
+    <Compile Include="TableInfoBll.cs" />
+    <Compile Include="HallInfoBll.cs" />
+    <Compile Include="ManagerInfoBll.cs" />
+    <Compile Include="DishInfoBll.cs" />
+    <Compile Include="MemberInfoBll.cs" />
+    <Compile Include="DishTypeInfoBll.cs" />
+    <Compile Include="MemberTypeInfoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

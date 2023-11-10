@@ -44,6 +44,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\lib\x64\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,14 +58,108 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DdlFreeSearchModel.cs" />
+    <Compile Include="FormDishInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDishInfo.Designer.cs">
+      <DependentUpon>FormDishInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDishTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDishTypeInfo.Designer.cs">
+      <DependentUpon>FormDishTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHallInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHallInfo.Designer.cs">
+      <DependentUpon>FormHallInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagerInfo.Designer.cs">
+      <DependentUpon>FormManagerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberInfo.Designer.cs">
+      <DependentUpon>FormMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemberTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemberTypeInfo.Designer.cs">
+      <DependentUpon>FormMemberTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrderDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderDish.Designer.cs">
+      <DependentUpon>FormOrderDish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrderPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderPay.Designer.cs">
+      <DependentUpon>FormOrderPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTableInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTableInfo.Designer.cs">
+      <DependentUpon>FormTableInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDishInfo.resx">
+      <DependentUpon>FormDishInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDishTypeInfo.resx">
+      <DependentUpon>FormDishTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHallInfo.resx">
+      <DependentUpon>FormHallInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagerInfo.resx">
+      <DependentUpon>FormManagerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberInfo.resx">
+      <DependentUpon>FormMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemberTypeInfo.resx">
+      <DependentUpon>FormMemberTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderDish.resx">
+      <DependentUpon>FormOrderDish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderPay.resx">
+      <DependentUpon>FormOrderPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTableInfo.resx">
+      <DependentUpon>FormTableInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,7 +168,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ItcastCater.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +183,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\desk1.png" />
+    <Content Include="images\desk2.png" />
+    <Content Include="images\loginBg.png" />
+    <Content Include="images\logo.ico" />
+    <Content Include="images\menuBg.BMP" />
+    <Content Include="images\menuDish.png" />
+    <Content Include="images\menuManager.png" />
+    <Content Include="images\menuMember.png" />
+    <Content Include="images\menuOrder.png" />
+    <Content Include="images\menuQuit.png" />
+    <Content Include="images\menuTable.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
